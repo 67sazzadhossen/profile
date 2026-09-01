@@ -58,7 +58,7 @@ export default function ProcessSection() {
               05 / Process
             </p>
             <h2
-              className="mt-9 text-[clamp(4rem,8.2vw,9.2rem)] leading-[.82] font-medium tracking-[-.08em]"
+              className="mt-9 text-[clamp(4rem,8.2vw,9.2rem)] leading-[.82] font-medium tracking-[-.08em] max-[760px]:text-[clamp(2.8rem,12vw,3.8rem)] max-[760px]:leading-[.9]"
               id="process-title"
             >
               From idea to
@@ -85,7 +85,7 @@ export default function ProcessSection() {
                 {step.number}
               </span>
               <div>
-                <h3 className="text-[clamp(2.2rem,4vw,5rem)] leading-none tracking-[-.06em]">
+                <h3 className="text-[clamp(2.2rem,4vw,5rem)] leading-none tracking-[-.06em] max-[760px]:text-[1.9rem]">
                   {step.title}
                 </h3>
                 <p className="mt-3 text-[9px] tracking-[.16em] text-muted uppercase">

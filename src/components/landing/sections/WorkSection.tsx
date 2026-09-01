@@ -171,7 +171,7 @@ export default function WorkSection() {
               02 / Selected work
             </p>
             <h2
-              className="mt-10 max-w-[1250px] text-[clamp(4.5rem,11vw,13rem)] leading-[.78] font-medium tracking-[-.085em]"
+              className="mt-10 max-w-[1250px] text-[clamp(4.5rem,11vw,13rem)] leading-[.78] font-medium tracking-[-.085em] max-[760px]:text-[clamp(3rem,13vw,4rem)] max-[760px]:leading-[.86]"
               id="work-title"
             >
               Systems with
@@ -203,7 +203,7 @@ export default function WorkSection() {
                 <span style={{ color: project.accent }}>{project.number}</span>
                 <span className="text-muted">{project.category}</span>
               </div>
-              <h3 className="mt-8 text-[clamp(3.2rem,5.7vw,6.8rem)] leading-[.84] font-medium tracking-[-.07em]">
+              <h3 className="mt-8 text-[clamp(3.2rem,5.7vw,6.8rem)] leading-[.84] font-medium tracking-[-.07em] max-[760px]:text-[clamp(2.35rem,10.5vw,3.2rem)] max-[760px]:leading-[.9]">
                 {project.title}
               </h3>
               <p className="mt-6 max-w-[680px] text-[clamp(1rem,1.3vw,1.3rem)] leading-[1.45] text-[#d5d3cc]">

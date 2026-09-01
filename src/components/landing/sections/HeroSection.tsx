@@ -13,28 +13,47 @@ function AnimatedLetters({
   text: string;
   lineDelay?: number;
 }) {
+  const words = text.split(" ");
   const letters = Array.from(text);
   const middle = (letters.length - 1) / 2;
+  let characterOffset = 0;
 
-  return letters.map((letter, index) => {
-    const fromLeft = index <= middle;
-    const distanceFromEdge = Math.min(index, letters.length - 1 - index);
-    const style = {
-      "--letter-x": fromLeft ? "-70px" : "70px",
-      "--letter-tilt": fromLeft ? "-18deg" : "18deg",
-      "--letter-over": fromLeft ? "7px" : "-7px",
-      "--letter-back": fromLeft ? "-3px" : "3px",
-      animationDelay: `${0.25 + lineDelay + distanceFromEdge * 0.022}s`,
-    } as CSSProperties;
+  return words.map((word, wordIndex) => {
+    const wordOffset = characterOffset;
+    characterOffset += word.length + 1;
 
     return (
-      <span className="inline-block" key={`${letter}-${index}`}>
-        <span
-          className="inline-block [backface-visibility:hidden] motion-safe:animate-[letter-reveal_.5s_linear_both]"
-          style={style}
-        >
-          {letter === " " ? "\u00a0" : letter}
-        </span>
+      <span
+        className="inline-block whitespace-nowrap"
+        key={`${word}-${wordIndex}`}
+      >
+        {Array.from(word).map((letter, letterIndex) => {
+          const index = wordOffset + letterIndex;
+          const fromLeft = index <= middle;
+          const distanceFromEdge = Math.min(
+            index,
+            letters.length - 1 - index,
+          );
+          const style = {
+            "--letter-x": fromLeft ? "-70px" : "70px",
+            "--letter-tilt": fromLeft ? "-18deg" : "18deg",
+            "--letter-over": fromLeft ? "7px" : "-7px",
+            "--letter-back": fromLeft ? "-3px" : "3px",
+            animationDelay: `${0.25 + lineDelay + distanceFromEdge * 0.022}s`,
+          } as CSSProperties;
+
+          return (
+            <span className="inline-block" key={`${letter}-${index}`}>
+              <span
+                className="inline-block [backface-visibility:hidden] motion-safe:animate-[letter-reveal_.5s_linear_both]"
+                style={style}
+              >
+                {letter}
+              </span>
+            </span>
+          );
+        })}
+        {wordIndex < words.length - 1 ? "\u00a0" : null}
       </span>
     );
   });
@@ -184,7 +203,7 @@ export default function HeroSection() {
       id="home"
       aria-labelledby="hero-title"
     >
-      <div className="sticky top-0 isolate flex min-h-svh items-center overflow-hidden px-[clamp(24px,5vw,80px)] pt-[130px] pb-[100px] before:absolute before:inset-0 before:-z-2 before:bg-[linear-gradient(rgb(244_241_233/14%)_1px,transparent_1px),linear-gradient(90deg,rgb(244_241_233/14%)_1px,transparent_1px)] before:bg-[size:70px_70px] before:opacity-14 before:[mask-image:linear-gradient(to_bottom,black,transparent_85%)] after:absolute after:top-[15%] after:right-[3%] after:-z-1 after:size-[42vw] after:rounded-full after:bg-accent after:opacity-7 after:blur-[180px]">
+      <div className="sticky top-0 isolate flex min-h-svh items-center overflow-hidden px-[clamp(24px,5vw,80px)] pt-[130px] pb-[100px] before:absolute before:inset-0 before:-z-2 before:bg-[linear-gradient(rgb(244_241_233/14%)_1px,transparent_1px),linear-gradient(90deg,rgb(244_241_233/14%)_1px,transparent_1px)] before:bg-[size:70px_70px] before:opacity-14 before:[mask-image:linear-gradient(to_bottom,black,transparent_85%)] after:absolute after:top-[15%] after:right-[3%] after:-z-1 after:size-[42vw] after:rounded-full after:bg-accent after:opacity-7 after:blur-[180px] max-[760px]:pt-[100px] max-[760px]:pb-[54px]">
         <div
           ref={watermarkRef}
           className="pointer-events-none absolute inset-0 z-0 mx-auto h-full w-[min(78vw,920px)] overflow-hidden rounded-full opacity-[.18] [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_60%,transparent_100%)] max-[900px]:w-[92vw]"
@@ -206,7 +225,7 @@ export default function HeroSection() {
 
         <div className="relative z-1 mx-auto w-full max-w-[1660px] text-center perspective-[700px]">
           <h1
-            className="m-0 origin-bottom text-[clamp(4rem,7.2vw,9rem)] leading-[.84] font-medium tracking-[-.075em] whitespace-nowrap [transform-style:preserve-3d] max-[760px]:text-[clamp(3rem,13.5vw,5.4rem)] max-[760px]:whitespace-normal"
+            className="m-0 origin-bottom text-[clamp(4rem,7.2vw,9rem)] leading-[.84] font-medium tracking-[-.075em] whitespace-nowrap [transform-style:preserve-3d] max-[760px]:text-[clamp(2.5rem,10.5vw,3.4rem)] max-[760px]:leading-[.94] max-[760px]:tracking-[-.06em] max-[760px]:whitespace-normal"
             id="hero-title"
             aria-label="I engineer backend systems built to scale."
           >
@@ -230,7 +249,7 @@ export default function HeroSection() {
 
           <div
             ref={supportingRef}
-            className="mx-auto mt-12 w-[min(90vw,570px)] text-center"
+            className="mx-auto mt-12 w-[min(90vw,570px)] text-center max-[760px]:mt-7"
           >
             <div className="motion-safe:animate-[content-emerge_.55s_cubic-bezier(.16,1,.3,1)_.9s_both]">
               <p className="mx-auto max-w-[520px] text-[clamp(13px,1.05vw,16px)] leading-[1.65] text-muted">

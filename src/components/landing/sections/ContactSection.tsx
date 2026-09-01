@@ -32,7 +32,7 @@ export default function ContactSection() {
           </div>
 
           <h2
-            className="mt-[clamp(55px,7vw,100px)] max-w-[1400px] text-[clamp(4.2rem,10.5vw,12rem)] leading-[.79] font-medium tracking-[-.085em]"
+            className="mt-[clamp(55px,7vw,100px)] max-w-[1400px] text-[clamp(4.2rem,10.5vw,12rem)] leading-[.79] font-medium tracking-[-.085em] max-[760px]:text-[clamp(3rem,13vw,4rem)] max-[760px]:leading-[.88]"
             id="contact-title"
           >
             Have a system

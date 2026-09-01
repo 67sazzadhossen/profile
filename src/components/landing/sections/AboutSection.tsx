@@ -67,7 +67,7 @@ export default function AboutSection() {
               01 / About me
             </p>
             <h2
-              className="max-w-[700px] text-[clamp(4rem,7.8vw,8.8rem)] leading-[.84] font-medium tracking-[-.078em]"
+              className="max-w-[700px] text-[clamp(4rem,7.8vw,8.8rem)] leading-[.84] font-medium tracking-[-.078em] max-[760px]:text-[clamp(2.8rem,12vw,3.8rem)] max-[760px]:leading-[.9]"
               id="about-title"
             >
               Behind the
@@ -79,7 +79,7 @@ export default function AboutSection() {
           </div>
 
           <div className="self-end pt-16 max-[900px]:pt-0">
-            <p className="max-w-[820px] text-[clamp(1.65rem,2.75vw,3.4rem)] leading-[1.08] tracking-[-.045em] text-[#e3e1da]">
+            <p className="max-w-[820px] text-[clamp(1.65rem,2.75vw,3.4rem)] leading-[1.08] tracking-[-.045em] text-[#e3e1da] max-[760px]:text-[1.35rem] max-[760px]:leading-[1.18]">
               I build the systems that keep digital products fast, secure, and
               ready to grow.
             </p>

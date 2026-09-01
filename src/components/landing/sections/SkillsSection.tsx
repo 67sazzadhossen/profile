@@ -93,7 +93,7 @@ export default function SkillsSection() {
               04 / Expertise
             </p>
             <h2
-              className="mt-9 text-[clamp(4rem,7.7vw,8.7rem)] leading-[.82] font-medium tracking-[-.08em]"
+              className="mt-9 text-[clamp(4rem,7.7vw,8.7rem)] leading-[.82] font-medium tracking-[-.08em] max-[760px]:text-[clamp(2.8rem,12vw,3.8rem)] max-[760px]:leading-[.9]"
               id="skills-title"
             >
               Built with
@@ -136,7 +136,7 @@ export default function SkillsSection() {
               </span>
               <div>
                 <div className="flex items-start justify-between gap-5">
-                  <h3 className="text-[clamp(2rem,3.5vw,4.2rem)] leading-none tracking-[-.06em]">
+                  <h3 className="text-[clamp(2rem,3.5vw,4.2rem)] leading-none tracking-[-.06em] max-[760px]:text-[1.75rem]">
                     {item.title}
                   </h3>
                   <span
@@ -174,7 +174,7 @@ export default function SkillsSection() {
             <p className="text-[10px] tracking-[.2em] text-black/45 uppercase">
               Tools &amp; technologies
             </p>
-            <h3 className="mt-5 text-[clamp(2.8rem,5.5vw,6.5rem)] leading-[.9] tracking-[-.07em]">
+            <h3 className="mt-5 text-[clamp(2.8rem,5.5vw,6.5rem)] leading-[.9] tracking-[-.07em] max-[760px]:text-[clamp(2.3rem,10vw,3rem)] max-[760px]:leading-[.96]">
               The stack behind
               <br />
               <em className="font-normal text-[#667617] [font-family:Georgia,serif]">

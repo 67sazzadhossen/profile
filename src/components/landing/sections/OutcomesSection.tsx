@@ -54,7 +54,7 @@ export default function OutcomesSection() {
               03 / Project outcomes
             </p>
             <h2
-              className="mt-9 text-[clamp(4rem,8vw,9rem)] leading-[.82] font-medium tracking-[-.08em]"
+              className="mt-9 text-[clamp(4rem,8vw,9rem)] leading-[.82] font-medium tracking-[-.08em] max-[760px]:text-[clamp(2.8rem,12vw,3.8rem)] max-[760px]:leading-[.9]"
               id="outcomes-title"
             >
               Built to make
@@ -65,7 +65,7 @@ export default function OutcomesSection() {
             </h2>
           </div>
           <div className="self-end">
-            <p className="max-w-[800px] text-[clamp(1.6rem,2.8vw,3.3rem)] leading-[1.1] tracking-[-.045em]">
+            <p className="max-w-[800px] text-[clamp(1.6rem,2.8vw,3.3rem)] leading-[1.1] tracking-[-.045em] max-[760px]:text-[1.35rem] max-[760px]:leading-[1.18]">
               The value of a backend is not the code itself—it is what the
               product can do reliably because that code exists.
             </p>
@@ -90,7 +90,7 @@ export default function OutcomesSection() {
                   {item.system}
                 </span>
               </div>
-              <h3 className="mt-14 max-w-[600px] text-[clamp(2rem,3.4vw,4.2rem)] leading-[.95] tracking-[-.06em] max-[760px]:mt-9">
+              <h3 className="mt-14 max-w-[600px] text-[clamp(2rem,3.4vw,4.2rem)] leading-[.95] tracking-[-.06em] max-[760px]:mt-9 max-[760px]:text-[1.75rem] max-[760px]:leading-[1]">
                 {item.outcome}
               </h3>
               <p className="mt-6 max-w-[600px] text-sm leading-6 text-black/60">
