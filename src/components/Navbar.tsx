@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const links = [
@@ -25,9 +26,21 @@ export default function Navbar() {
         className="mx-auto grid min-h-[68px] w-full max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center rounded-[18px] border border-line bg-background/72 py-0 pr-3 pl-[18px] shadow-[0_12px_50px_rgb(0_0_0/22%)] backdrop-blur-[18px] max-[760px]:flex max-[760px]:min-h-[60px] max-[760px]:justify-between max-[760px]:rounded-[15px] max-[760px]:pr-3 max-[760px]:pl-[14px]"
         aria-label="Primary navigation"
       >
-        <Link className="flex w-fit items-center gap-2.5 text-[17px] font-bold tracking-[-.03em]" href="/" aria-label="Portfolio home">
-          <span className="grid size-[34px] place-items-center rounded-full border border-line text-[13px]" aria-hidden="true">P</span>
-          <span>Portfolio</span>
+        <Link className="flex w-fit items-center gap-2.5 text-[17px] font-bold tracking-[-.03em]" href="/" aria-label="Md. Sazzad Hossen — home">
+          <span
+            className="relative size-[38px] shrink-0"
+            aria-hidden="true"
+          >
+            <Image
+              className="object-contain"
+              src="/logo.png"
+              alt=""
+              fill
+              sizes="38px"
+              priority
+            />
+          </span>
+          <span>Md. Sazzad Hossen</span>
           <span className="-mt-3 -ml-[7px] size-[5px] rounded-full bg-accent" aria-hidden="true" />
         </Link>
 

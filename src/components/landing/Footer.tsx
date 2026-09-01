@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
@@ -21,8 +22,14 @@ export default function Footer() {
               href="/"
               aria-label="Sazzad Hossen — back to home"
             >
-              <span className="grid size-10 place-items-center rounded-full border border-line text-sm">
-                S
+              <span className="relative size-12 shrink-0" aria-hidden="true">
+                <Image
+                  className="object-contain"
+                  src="/logo.png"
+                  alt=""
+                  fill
+                  sizes="48px"
+                />
               </span>
               Sazzad Hossen
               <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />

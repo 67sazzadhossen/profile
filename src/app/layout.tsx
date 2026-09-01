@@ -3,7 +3,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Creative Developer Portfolio",
+  title: "Md. Sazzad Hossen | Backend Engineer",
   description: "A creative developer portfolio focused on immersive digital experiences.",
 };
 
