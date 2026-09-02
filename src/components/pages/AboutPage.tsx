@@ -33,6 +33,23 @@ const experience = [
   "Real-time applications",
 ];
 
+const workExperience = [
+  {
+    period: "August 1, 2026 — Present",
+    role: "Software Engineer",
+    company: "FameIT Networks Ltd",
+    description:
+      "Building backend and full-stack products with TypeScript, Node.js, Express.js, React, Next.js and PostgreSQL, including secure APIs, role-based workflows, real-time features and responsive dashboards.",
+  },
+  {
+    period: "2022 — Present",
+    role: "Senior Software Engineer",
+    company: "Pi Infotech · Part-time",
+    description:
+      "Leading custom business systems across education, payments and communication—from API and data-model design to React and Next.js interfaces, integrations, delivery and production-focused improvements.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -76,13 +93,46 @@ export default function AboutPage() {
             </h1>
             <div className="mt-[clamp(55px,7vw,95px)] flex items-end justify-between gap-12 border-t border-line pt-7 max-[760px]:items-start max-[760px]:flex-col">
               <p className="text-[10px] tracking-[.18em] text-muted uppercase">
-                Backend Engineer / Bangladesh
+                Software Engineer / Bangladesh
               </p>
               <p className="max-w-[710px] text-[clamp(1.25rem,2.15vw,2.5rem)] leading-[1.25] tracking-[-.035em] text-[#d9d7d0]">
-                I turn product requirements into secure APIs, dependable data
-                flows, and backend systems built for real-world use.
+                I turn product requirements into secure backend systems and
+                responsive frontend experiences built for real-world use.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="border-t border-line bg-[#0b0c0e] px-[clamp(24px,7vw,120px)] py-[clamp(100px,12vw,170px)]">
+          <div className="mx-auto grid w-full max-w-[1500px] grid-cols-[.65fr_1.35fr] gap-[clamp(55px,10vw,160px)] max-[850px]:grid-cols-1">
+            <div>
+              <p className="text-[10px] tracking-[.2em] text-accent uppercase">Professional experience</p>
+              <h2 className="mt-7 text-[clamp(3.8rem,7vw,8rem)] leading-[.84] tracking-[-.075em]">
+                Work that<br />
+                <em className="font-normal text-accent [font-family:Georgia,serif]">ships.</em>
+              </h2>
+              <a
+                className="mt-9 inline-flex items-center gap-5 border-b border-accent pb-2 text-xs font-bold transition-colors hover:text-accent"
+                href="https://drive.google.com/file/d/1sNrU8tzpT8kdMUlwZHmZd0lbTPnB4zmR/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download my resume <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+            <ol className="border-t border-line">
+              {workExperience.map((item, index) => (
+                <li className="grid grid-cols-[110px_1fr] gap-8 border-b border-line py-[clamp(32px,4vw,58px)] max-[560px]:grid-cols-1 max-[560px]:gap-4" key={item.company}>
+                  <span className="text-[10px] tracking-[.15em] text-muted">0{index + 1}</span>
+                  <article>
+                    <p className="text-[10px] tracking-[.14em] text-accent uppercase">{item.period}</p>
+                    <h3 className="mt-4 text-[clamp(1.8rem,3vw,3.7rem)] leading-[1.02] tracking-[-.05em]">{item.role}</h3>
+                    <p className="mt-2 text-sm font-semibold text-[#d2d0c9]">{item.company}</p>
+                    <p className="mt-6 max-w-[760px] text-[15px] leading-7 text-muted">{item.description}</p>
+                  </article>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 

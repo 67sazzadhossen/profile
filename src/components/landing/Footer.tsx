@@ -68,6 +68,16 @@ export default function Footer() {
               </p>
               <ul className="space-y-3">
                 <li>
+                  <a
+                    className="text-sm text-[#cfcdc6] transition-colors hover:text-accent"
+                    href="https://drive.google.com/file/d/1sNrU8tzpT8kdMUlwZHmZd0lbTPnB4zmR/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Download resume ↓
+                  </a>
+                </li>
+                <li>
                   <Link
                     className="text-sm text-[#cfcdc6] transition-colors hover:text-accent"
                     href={`mailto:${email}`}
@@ -110,7 +120,7 @@ export default function Footer() {
 
         <div className="mt-[clamp(70px,10vw,150px)] flex items-center justify-between gap-8 border-t border-line py-7 text-[9px] tracking-[.14em] text-muted uppercase max-[620px]:flex-col max-[620px]:items-start">
           <p>© 2026 Sazzad Hossen. All rights reserved.</p>
-          <p>Backend Engineer / Bangladesh</p>
+          <p>Software Engineer / Bangladesh</p>
           <Link className="transition-colors hover:text-accent" href="/">
             Back to top ↑
           </Link>

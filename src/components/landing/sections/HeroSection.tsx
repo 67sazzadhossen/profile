@@ -227,10 +227,10 @@ export default function HeroSection() {
           <h1
             className="m-0 origin-bottom text-[clamp(4rem,7.2vw,9rem)] leading-[.84] font-medium tracking-[-.075em] whitespace-nowrap [transform-style:preserve-3d] max-[760px]:text-[clamp(2.5rem,10.5vw,3.4rem)] max-[760px]:leading-[.94] max-[760px]:tracking-[-.06em] max-[760px]:whitespace-normal"
             id="hero-title"
-            aria-label="I engineer backend systems built to scale."
+            aria-label="I engineer full-stack systems built to scale."
           >
             <span ref={topLineRef} className="inline-block" aria-hidden="true">
-              <AnimatedLetters text="I engineer backend systems" />
+              <AnimatedLetters text="I engineer full-stack systems" />
             </span>
             <br />
             <span
@@ -253,8 +253,8 @@ export default function HeroSection() {
           >
             <div className="motion-safe:animate-[content-emerge_.55s_cubic-bezier(.16,1,.3,1)_.9s_both]">
               <p className="mx-auto max-w-[520px] text-[clamp(13px,1.05vw,16px)] leading-[1.65] text-muted">
-                Backend engineer building secure APIs, real-time systems, and
-                scalable infrastructure that power reliable digital products.
+                Backend-focused software engineer building secure APIs and
+                scalable systems, with responsive React and Next.js interfaces.
               </p>
               <div className="mt-[22px] flex items-center justify-center gap-3 max-[460px]:flex-col max-[460px]:gap-2.5">
                 <a
@@ -268,6 +268,14 @@ export default function HeroSection() {
                   href="#contact"
                 >
                   Build with me
+                </a>
+                <a
+                  className="flex min-h-12 items-center justify-center rounded-xl border border-line px-[18px] text-xs font-bold transition-[transform,border-color] duration-250 hover:-translate-y-0.5 hover:border-accent max-[460px]:w-full"
+                  href="https://drive.google.com/file/d/1sNrU8tzpT8kdMUlwZHmZd0lbTPnB4zmR/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Download resume <span aria-hidden="true">↓</span>
                 </a>
               </div>
             </div>

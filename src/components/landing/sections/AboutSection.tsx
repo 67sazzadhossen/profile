@@ -80,33 +80,38 @@ export default function AboutSection() {
 
           <div className="self-end pt-16 max-[900px]:pt-0">
             <p className="max-w-[820px] text-[clamp(1.65rem,2.75vw,3.4rem)] leading-[1.08] tracking-[-.045em] text-[#e3e1da] max-[760px]:text-[1.35rem] max-[760px]:leading-[1.18]">
-              I build the systems that keep digital products fast, secure, and
-              ready to grow.
+              I build complete digital products—from dependable backend systems
+              to polished, responsive frontend experiences.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-10 border-t border-line pt-8 max-[640px]:grid-cols-1 max-[640px]:gap-5">
               <p className="max-w-[480px] text-[15px] leading-7 text-muted">
-                I&apos;m a backend engineer focused on turning complex business
-                requirements into clean, maintainable services—from database
-                design and API architecture to authentication and deployment.
+                I&apos;m a backend-focused software engineer who turns complex
+                requirements into maintainable services—from database design
+                and API architecture to authentication and deployment.
               </p>
               <p className="max-w-[480px] text-[15px] leading-7 text-muted">
-                My work spans real-time platforms, management systems,
-                payments, communication tools, and hardware integrations. I
-                care about reliability long after the first release.
+                I also build accessible, responsive interfaces with React,
+                Next.js, TypeScript and Tailwind CSS, connecting the product
+                experience cleanly to its underlying systems.
               </p>
             </div>
-            <Link
-              className="group mt-9 inline-flex items-center gap-6 border-b border-accent pb-2 text-xs font-bold transition-colors hover:text-accent"
-              href="/about"
-            >
-              More about me
-              <span
-                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                aria-hidden="true"
+            <div className="mt-9 flex flex-wrap items-center gap-8">
+              <Link
+                className="group inline-flex items-center gap-6 border-b border-accent pb-2 text-xs font-bold transition-colors hover:text-accent"
+                href="/about"
               >
-                ↗
-              </span>
-            </Link>
+                More about me
+                <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">↗</span>
+              </Link>
+              <a
+                className="group inline-flex items-center gap-6 border-b border-line pb-2 text-xs font-bold transition-[color,border-color] hover:border-accent hover:text-accent"
+                href="https://drive.google.com/file/d/1sNrU8tzpT8kdMUlwZHmZd0lbTPnB4zmR/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download resume <span aria-hidden="true">↓</span>
+              </a>
+            </div>
           </div>
         </div>
 
